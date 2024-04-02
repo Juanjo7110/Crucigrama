@@ -44,15 +44,8 @@ public class JugadorController {
     
     public Jugador jugador1;
     
-    public void start(Stage stage) throws Exception {
-    	   
-		Parent root = FXMLLoader.load(getClass().getResource("Vista.vista.fxml"));
-		Scene scene = new Scene(root);
-		
-		stage.setScene(scene);
-		stage.show();
-	
-}
+ 
+
     
     public void crearJugador(ActionEvent event) {
     	
