@@ -49,24 +49,20 @@ public class JugadorController {
     
     public void crearJugador(ActionEvent event) {
     	
-    	System.out.println("Jugador agregado");
     	
-    	/*jugador1 = new Jugador(null,null);
+    	jugador1 = new Jugador(null,null);
     	
     	jugador1.setNickname(nameField.getText());
     	jugador1.setCodigo(CodeField.getText());
     	
+    	System.out.println(jugador1.getNickname() +  " " + jugador1.getCodigo());
+    	
 		try {
-			
-			Parent root = FXMLLoader.load(getClass().getResource("vista.fxml"));
-			Scene scene = new Scene(root);
-			
-			primaryStage.setScene(scene);
-			primaryStage.show();
+	
 		
 		} catch (Exception e) {
 			e.printStackTrace();
-		}*/
+		}
 	}
     
 
