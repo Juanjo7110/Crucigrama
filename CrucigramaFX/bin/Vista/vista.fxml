@@ -35,4 +35,6 @@
    <effect>
       <ColorAdjust brightness="-0.35" />
    </effect>
-</AnchorPane>
+
+  </AnchorPane>
+

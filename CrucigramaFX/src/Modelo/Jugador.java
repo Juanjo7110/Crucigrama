@@ -2,6 +2,11 @@ package Modelo;
 
 import java.util.*;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 public class Jugador {
 	
 	private String nickname;
@@ -26,5 +31,27 @@ public class Jugador {
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
+    
+    public void Ingresar (Stage primaryStage) {
+		try {
+			
+			Parent root = FXMLLoader.load(getClass().getResource("/Vista/vistaSeleccionNiveles.fxml"));
+			Scene scene = new Scene(root);
+			
+			primaryStage.setScene(scene);
+			primaryStage.show();
+			/*BorderPane root = new BorderPane();
+			Scene scene = new Scene(root,400,400);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			
+			
+			
+			primaryStage.setTitle("Crucigrama");
+			primaryStage.setScene(scene);
+			primaryStage.show();*/
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
     
 }

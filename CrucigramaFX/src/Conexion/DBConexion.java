@@ -10,16 +10,17 @@ import javax.swing.JOptionPane;
 
 public class DBConexion {
 	
-	public static final String controlador = "  ";
-	public static final String base_datos = "  ";
-	public static final String usuario = "  ";
-	public static final String contraseña = "  ";
+	public static final String url = "jdbc:mysql://localhost:3306/CrucigramaBD";
+	public static final String controlador = "com.mysql.jdbc.Driver";
+	public static final String usuario = "root";
+	public static final String contraseña = "12345678";
 	Connection conexion = null;
 	
 	
 	static {
 		try {
 			Class.forName(controlador);
+			/*JOptionPane.showMessageDialog(null, "controlador conectado");*/
 		} catch (ClassNotFoundException e) { 	
 			System.out.println("Error al cargar el controlador");
 		}
@@ -29,7 +30,7 @@ public class DBConexion {
 public Connection conectar() {
 	
 	try {
-		conexion = DriverManager.getConnection(base_datos, usuario, contraseña);
+		conexion = DriverManager.getConnection(url, usuario, contraseña);
 		System.out.println("Conexion hecha");
 		
 	} catch (SQLException e) {

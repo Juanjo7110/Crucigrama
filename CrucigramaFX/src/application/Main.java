@@ -8,6 +8,14 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import Conexion.DBConexion;
+
+
 public class Main extends Application {
 	
 	@Override
@@ -31,6 +39,8 @@ public class Main extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	
+		
 	}
 	
 	public static void main(String[] args) {
