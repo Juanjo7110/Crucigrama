@@ -65,12 +65,50 @@ public class SeleccionNivelesController {
 
 	    @FXML
 	    void iniciarTablero5x5(ActionEvent event) {
+	    	
+	    	try {
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/vistaCuadricula4x4.fxml"));
+				Parent root = loader.load();
+				
+				CuadriculasController controlador = loader.getController();
+				
+				Scene scene = new Scene(root);
+				Stage stage = new Stage();
+				stage.initModality(Modality.APPLICATION_MODAL);
+				stage.setScene(scene);
+				stage.show();
+			
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+	  	
+	    	
+			}
 
-	    }
+	    
 
 	    @FXML
 	    void iniciarTablero6x6(ActionEvent event) {
+	    	
+	    	try {
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/vistaCuadricula4x4.fxml"));
+				Parent root = loader.load();
+				
+				CuadriculasController controlador = loader.getController();
+				
+				Scene scene = new Scene(root);
+				Stage stage = new Stage();
+				stage.initModality(Modality.APPLICATION_MODAL);
+				stage.setScene(scene);
+				stage.show();
+			
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+	  	
+	    	
+			}
 
 	    }
 
-}
+
