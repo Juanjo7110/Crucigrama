@@ -7,6 +7,8 @@ import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
 
+import Modelo.Jugador;
+
 
 public class DBConexion {
 	
@@ -39,4 +41,6 @@ public Connection conectar() {
 	
 	return conexion;
 }
+
+	
 }

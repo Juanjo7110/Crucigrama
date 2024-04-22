@@ -1,5 +1,6 @@
 package Controller;
 
+import Modelo.Crucigrama;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +14,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.layout.AnchorPane;
 
-public class SeleccionNivelesController {
+public class PartidaController {
 	
 	@FXML
     private ToolBar barra1;
@@ -46,7 +47,7 @@ public class SeleccionNivelesController {
 				FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/vistaCuadricula4x4.fxml"));
 				Parent root = loader.load();
 				
-				CuadriculasController controlador = loader.getController();
+				CrucigramaController controlador = loader.getController();
 				
 				Scene scene = new Scene(root);
 				Stage stage = new Stage();
@@ -67,10 +68,10 @@ public class SeleccionNivelesController {
 	    void iniciarTablero5x5(ActionEvent event) {
 	    	
 	    	try {
-				FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/vistaCuadricula4x4.fxml"));
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/vistaCuadricula5x5.fxml"));
 				Parent root = loader.load();
 				
-				CuadriculasController controlador = loader.getController();
+				CrucigramaController controlador = loader.getController();
 				
 				Scene scene = new Scene(root);
 				Stage stage = new Stage();
@@ -91,10 +92,10 @@ public class SeleccionNivelesController {
 	    void iniciarTablero6x6(ActionEvent event) {
 	    	
 	    	try {
-				FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/vistaCuadricula4x4.fxml"));
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/vistaCuadricula6x6.fxml"));
 				Parent root = loader.load();
 				
-				CuadriculasController controlador = loader.getController();
+				CrucigramaController controlador = loader.getController();
 				
 				Scene scene = new Scene(root);
 				Stage stage = new Stage();
@@ -108,6 +109,17 @@ public class SeleccionNivelesController {
 	  	
 	    	
 			}
+	    
+	    public boolean validarTableto (Crucigrama tablero, ActionEvent event) {
+	    	
+	    	return true;
+	    	
+	    }
+	    
+	    public String pista (Crucigrama tablero, ActionEvent event) {
+	    	
+	    	return "";
+	    }
 
 	    }
 

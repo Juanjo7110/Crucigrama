@@ -57,9 +57,7 @@ public class JugadorController {
     //VentanaSleccionNiveles
     
     
-    DBConexion conexion = new DBConexion();
-    Connection conection = conexion.conectar();
-
+   
     
     public void crearJugador(ActionEvent event) {
     	
@@ -71,11 +69,15 @@ public class JugadorController {
     	
     	System.out.println(jugador1.getNickname() +  " " + jugador1.getCodigo());
     	
+    	ConectionCRUD insertarJugador = new ConectionCRUD();
+    	insertarJugador.InsertBD(jugador1);
+    	
+    	
     	try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vista/vistaSeleccionNiveles.fxml"));
 			Parent root = loader.load();
 			
-			SeleccionNivelesController controlador = loader.getController();
+			PartidaController controlador = loader.getController();
 			
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
@@ -87,28 +89,14 @@ public class JugadorController {
 			e.printStackTrace();
 		}
     	
-    	try {                      
-			String SQL = "INSERT INTO usuarios values (?, ?); ";
-
-			PreparedStatement pst= conection.prepareStatement(SQL);
-
-			pst.setString(1,jugador1.getCodigo());
-			pst.setString(2, jugador1.getNickname());
-			pst.execute();
-
-			System.out.println("se registro los datos");
-
-		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null,"Error de conexi�n:" + e.getMessage());
-			System.out.println("error de registro");
-		}
+    }
 
 	
     	
     }
     
     
-}
+
 
 
 
