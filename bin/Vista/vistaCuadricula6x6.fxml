@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="ventanaSeis" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="549.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CrucigramaController">
+   <children>
+      <Button fx:id="botonStop" layoutX="313.0" layoutY="45.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="Terminar partida" onAction="#Stop" />
+      <Text fx:id="nivelDificil" layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dificil">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <ToolBar fx:id="barraSeis" nodeOrientation="RIGHT_TO_LEFT" prefHeight="32.0" prefWidth="549.0">
+        <items>
+          <Button fx:id="botonSalirSeis" alignment="CENTER_RIGHT" contentDisplay="TOP" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="11.0" prefWidth="15.0" text="x" textAlignment="CENTER" textOverrun="CLIP">
+               <font> 
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+        </items>
+      </ToolBar>
+      <Button fx:id="seisbotonPista" layoutX="425.0" layoutY="45.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="PISTA" />
+      <GridPane layoutX="35.0" layoutY="114.0" prefHeight="247.0" prefWidth="240.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextArea fx:id="seis00" cache="true" prefHeight="200.0" prefWidth="200.0">
+               <font>
+                  <Font name="System Bold" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="seis10" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+            <TextArea fx:id="seis20" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
+            <TextArea fx:id="seis30" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" />
+            <TextArea fx:id="seis01" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+            <TextArea fx:id="seis11" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="seis02" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
+            <TextArea fx:id="seis21" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextArea fx:id="seis31" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextArea fx:id="seis12" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextArea fx:id="seis22" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextArea fx:id="seis32" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextArea fx:id="seis03" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
+            <TextArea fx:id="seis13" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextArea fx:id="seis23" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextArea fx:id="seis33" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextArea fx:id="seis40" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" />
+            <TextArea fx:id="seis41" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <TextArea fx:id="seis42" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <TextArea fx:id="seis43" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <TextArea fx:id="seis04" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4" />
+            <TextArea fx:id="seis14" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextArea fx:id="seis24" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextArea fx:id="seis34" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <TextArea fx:id="seis44" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <TextArea fx:id="seis50" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" />
+            <TextArea fx:id="seis51" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <TextArea fx:id="seis52" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <TextArea fx:id="seis53" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <TextArea fx:id="seis54" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <TextArea fx:id="seis05" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5" />
+            <TextArea fx:id="seis15" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextArea fx:id="seis25" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextArea fx:id="seis35" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <TextArea fx:id="seis45" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <TextArea fx:id="seis55" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <Text fx:id="seisVerticales" layoutX="293.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verticales">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Text fx:id="seisHoriontales" layoutX="293.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horizontales">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Text fx:id="Tiempo" layoutX="161.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00:00">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Button fx:id="BotonIniciarTiempo" layoutX="148.0" layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="INICIAR" onAction="#inicializarCronometro" />
+   </children>
+   <effect>
+      <ColorAdjust brightness="-0.35" />
+   </effect>
+</Pane>
