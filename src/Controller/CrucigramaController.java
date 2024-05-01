@@ -1,10 +1,12 @@
 package Controller;
 
 import java.io.IOException;
+import javafx.animation.Animation;
 
 import javax.swing.JOptionPane;
 
 import Modelo.Jugador;
+import Modelo.Partida;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -338,39 +340,17 @@ public class CrucigramaController {
     
     @FXML
     private Text Tiempo;
-
-    private Timeline timeline;
-    private int segundos = 0;
+    
+    public Partida partida1;
 
     
-    @FXML
-    public void inicializarCronometro() {
-        // Configurar el cronómetro
-        timeline = new Timeline(new KeyFrame(Duration.seconds(1), event ->{
-        	segundos = segundos + 1;
-            actualizarTiempoLabel();
-            }
-        ));
-        timeline.setCycleCount(Animation.INDEFINITE);
-        timeline.play();
-    }
-
-    private void actualizarTiempoLabel() {
-        // Actualizar el texto del label de tiempo
-        int horas = segundos / 3600;
-        int minutos = (segundos % 3600) / 60;
-        int segundosRestantes = segundos % 60;
-        Tiempo.setText(String.format("%02d:%02d:%02d", horas, minutos, segundosRestantes));
+    public void IniciarPartida(ActionEvent event) {
+    	partida1 = new Partida();
+    	partida1.inicializarCronometro(Tiempo);
     }
     
-       
-        
-    public void Stop(){
-        timeline.stop();
-        String tiempoTexto = Tiempo.getText(); 
-        JOptionPane.showMessageDialog(null, "¡¡Felicidades!! \n Su tiempo fue: \n" + tiempoTexto);
-        Stage stage = (Stage) botonStop.getScene().getWindow();
-        stage.close();
+    public void TerminarPartida(ActionEvent event) {
+    	partida1.Stop(Tiempo, botonStop);
     }
 
     

@@ -13,7 +13,7 @@
 
 <Pane fx:id="ventanaCinco" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="549.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CrucigramaController">
    <children>
-      <Button fx:id="botonStop" layoutX="313.0" layoutY="45.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="Terminar partida" onAction="#Stop" />
+      <Button fx:id="botonStop" layoutX="313.0" layoutY="45.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="Terminar partida" onAction="#TerminarPartida" />
       <Text fx:id="nivelMedio" layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medio">
          <font>
             <Font name="System Bold" size="19.0" />
@@ -91,7 +91,7 @@
             <Font name="System Bold" size="19.0" />
          </font>
       </Text>
-      <Button fx:id="BotonIniciarTiempo" layoutX="148.0" layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="INICIAR" onAction="#inicializarCronometro" />
+      <Button fx:id="BotonIniciarTiempo" layoutX="148.0" layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="INICIAR" onAction="#IniciarPartida" />
    </children>
    <effect>
       <ColorAdjust brightness="-0.35" />
