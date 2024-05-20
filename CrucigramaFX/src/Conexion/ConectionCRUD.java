@@ -2,6 +2,7 @@ package Conexion;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.*;
 
 import javax.swing.JOptionPane;
 
@@ -25,7 +26,7 @@ public class ConectionCRUD {
 		pst.setString(2, jugador.getNickname());
 		pst.execute();
 
-		JOptionPane.showMessageDialog(null,"Bienvenido: " + jugador.getNickname());
+		return "Bienvenido: " + jugador.getNickname();
 		
 
 	} catch (Exception e) {
@@ -36,11 +37,79 @@ public class ConectionCRUD {
 	return "Datos Insertados";
 	}
 	
-	public String consultarTablero() {
+	public String consultarTablero4() {
 		
-		return "";
+		String cadena = null;
+		
+		try {                      
+			String SQL = "SELECT crucigrama FROM cricigramas where nivel = 4; ";
+
+			PreparedStatement pst= conection.prepareStatement(SQL);
+			
+			
+			ResultSet rs = pst.executeQuery();
+			rs.next();
+			cadena = rs.getString(1);
+			
+			
+
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null,"Error de conexi�n:" + e.getMessage());
+			System.out.println("error de registro");
+		}
+					
+		return cadena;
 	}
 
+public String consultarTablero5() {
+	
+	String cadena = null;
+		
+		try {                      
+			String SQL = "SELECT crucigrama FROM cricigramas where nivel = 5; ";
+
+			PreparedStatement pst= conection.prepareStatement(SQL);
+			
+			
+			ResultSet rs = pst.executeQuery();
+			rs.next();
+			cadena = rs.getString(1);
+			
+
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null,"Error de conexi�n:" + e.getMessage());
+			System.out.println("error de registro");
+		}
+					
+		return cadena;
+	}
+
+
+public String consultarTablero6() {
+	
+	String cadena = null;
+		
+		try {                      
+			String SQL = "SELECT crucigrama FROM cricigramas where nivel = 6; ";
+
+			PreparedStatement pst= conection.prepareStatement(SQL);
+			
+			
+			ResultSet rs = pst.executeQuery();
+			rs.next();
+			rs.getString(1);
+			
+		cadena = rs.getString(1);
+			
+
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null,"Error de conexi�n:" + e.getMessage());
+			System.out.println("error de registro");
+		}
+		
+	return cadena;
+					
+	}
 	
 }
 

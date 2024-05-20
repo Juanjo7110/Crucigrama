@@ -1,33 +1,67 @@
 package Modelo;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Crucigrama {
 	
-	String nivel;
-	int dificultadNivel;	
+	String crucigrama;
+	int nivel;
+	int [][] tablero;
 	
-	public Crucigrama (String nivel, int dificultadNivel) {
+	public Crucigrama (String cricigrama, int nivel) {
+		this.crucigrama = cricigrama;
 		this.nivel = nivel;
-		this.dificultadNivel = dificultadNivel;
 		
-		int [][] tablero = new int [dificultadNivel][dificultadNivel];
+		
+		this.tablero = new int [nivel][nivel];
+		
+		for (int i = 0; i < tablero.length; i++) {
+			int x = i*nivel;
+			for (int j = 0; j < tablero.length; j++) {
+				tablero[i][j] = crucigrama.charAt(x);
+				System.out.print(crucigrama.charAt(x));
+				x++;
+			}
+			System.out.println("");
+		}
+		
 	}
 	
 	public String getNivel() {
-		return nivel;
+		return crucigrama;
 	}
 	
 	public int getDificultadNivel() {
-		return dificultadNivel;
+		return nivel;
 	}
 	
 
     public void setNivel(String nivel) {
+        this.crucigrama = crucigrama;
+    }
+    
+    public void setDificultadNivel(int nivel) {
         this.nivel = nivel;
     }
     
-    public void setDificultadNivel(int dificultadNivel) {
-        this.dificultadNivel = dificultadNivel;
+    public Boolean validarCrucigrama (Crucigrama tablero) {
+    	
+    	return false;
+    	
     }
     
+    public void imprimirCrucigrama () {
+    	
+    	for (int i = 0; i < tablero.length ; i++) {
+			for (int j = 0; j < tablero.length; j++) {
+				System.out.println(tablero[i][j]);
+			}
+		}
+		
+	}
+   }
+    
+    
  
-}
+
