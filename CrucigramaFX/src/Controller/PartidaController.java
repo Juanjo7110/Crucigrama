@@ -50,7 +50,7 @@ public class PartidaController {
     
     public Crucigrama tablero;
     
-
+  
 	    @FXML
 	    void iniciarTablero4x4(ActionEvent event) {
 	    	

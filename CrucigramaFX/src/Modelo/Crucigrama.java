@@ -22,6 +22,7 @@ public class Crucigrama {
 				tablero[i][j] = crucigrama.charAt(x);
 				System.out.print(crucigrama.charAt(x));
 				x++;
+			
 			}
 			System.out.println("");
 		}

@@ -85,6 +85,7 @@ public String consultarTablero5() {
 	}
 
 
+
 public String consultarTablero6() {
 	
 	String cadena = null;
