@@ -150,6 +150,7 @@ public class PartidaController {
 	    public String pista (Crucigrama tablero, ActionEvent event) {
 	    	
 	    	return "";
+	    	
 	    }
 
 	    }

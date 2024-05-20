@@ -109,6 +109,8 @@ public String consultarTablero6() {
 		}
 		
 	return cadena;
+
+	
 					
 	}
 	
