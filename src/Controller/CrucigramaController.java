@@ -1,6 +1,7 @@
 package Controller;
 
 import java.io.IOException;
+import javafx.scene.input.KeyEvent;
 import javafx.animation.Animation;
 
 import javax.swing.JOptionPane;
@@ -345,6 +346,14 @@ public class CrucigramaController {
     
     @FXML
     private Button BotonIniciarTiempo;
+    
+    private void limitarCampoTexto(TextArea campoTexto) {
+        campoTexto.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.matches("[A-Z]") && !newValue.isEmpty() || newValue.length() > 1) {
+                campoTexto.setText(oldValue);
+            }
+        });
+    }
 
     
     public void IniciarPartida4x4(ActionEvent event) {
@@ -369,6 +378,23 @@ public class CrucigramaController {
     	cuatro13.setDisable(false);
     	cuatro23.setDisable(false);
     	cuatro33.setDisable(false);
+    	limitarCampoTexto(cuatro00);
+    	limitarCampoTexto(cuatro10);
+    	limitarCampoTexto(cuatro20);
+    	limitarCampoTexto(cuatro30);
+    	limitarCampoTexto(cuatro01);
+    	limitarCampoTexto(cuatro11);
+    	limitarCampoTexto(cuatro02);
+    	limitarCampoTexto(cuatro21);
+    	limitarCampoTexto(cuatro31);
+    	limitarCampoTexto(cuatro12);
+    	limitarCampoTexto(cuatro22);
+    	limitarCampoTexto(cuatro32);
+    	limitarCampoTexto(cuatro03);
+    	limitarCampoTexto(cuatro13);
+    	limitarCampoTexto(cuatro23);
+    	limitarCampoTexto(cuatro33);
+            
     }
     
     	public void IniciarPartida5x5(ActionEvent event) {
@@ -402,6 +428,32 @@ public class CrucigramaController {
             cinco24.setDisable(false);
             cinco34.setDisable(false);
             cinco44.setDisable(false);
+            
+            limitarCampoTexto(cinco00);
+            limitarCampoTexto(cinco10);
+            limitarCampoTexto(cinco20);
+            limitarCampoTexto(cinco30);
+            limitarCampoTexto(cinco01);
+            limitarCampoTexto(cinco11);
+            limitarCampoTexto(cinco02);
+            limitarCampoTexto(cinco21);
+            limitarCampoTexto(cinco31);
+            limitarCampoTexto(cinco12);
+            limitarCampoTexto(cinco22);
+            limitarCampoTexto(cinco32);
+            limitarCampoTexto(cinco03);
+            limitarCampoTexto(cinco13);
+            limitarCampoTexto(cinco23);
+            limitarCampoTexto(cinco33);
+            limitarCampoTexto(cinco40);
+            limitarCampoTexto(cinco41);
+            limitarCampoTexto(cinco42);
+            limitarCampoTexto(cinco43);
+            limitarCampoTexto(cinco04);
+            limitarCampoTexto(cinco14);
+            limitarCampoTexto(cinco24);
+            limitarCampoTexto(cinco34);
+            limitarCampoTexto(cinco44);
     	}
     	
     	
@@ -447,6 +499,43 @@ public class CrucigramaController {
             seis35.setDisable(false);
             seis45.setDisable(false);
             seis55.setDisable(false);
+            
+            limitarCampoTexto(seis00);
+            limitarCampoTexto(seis10);
+            limitarCampoTexto(seis20);
+            limitarCampoTexto(seis30);
+            limitarCampoTexto(seis01);
+            limitarCampoTexto(seis11);
+            limitarCampoTexto(seis02);
+            limitarCampoTexto(seis21);
+            limitarCampoTexto(seis31);
+            limitarCampoTexto(seis12);
+            limitarCampoTexto(seis22);
+            limitarCampoTexto(seis32);
+            limitarCampoTexto(seis03);
+            limitarCampoTexto(seis13);
+            limitarCampoTexto(seis23);
+            limitarCampoTexto(seis33);
+            limitarCampoTexto(seis40);
+            limitarCampoTexto(seis41);
+            limitarCampoTexto(seis42);
+            limitarCampoTexto(seis43);
+            limitarCampoTexto(seis04);
+            limitarCampoTexto(seis14);
+            limitarCampoTexto(seis24);
+            limitarCampoTexto(seis34);
+            limitarCampoTexto(seis44);
+            limitarCampoTexto(seis50);
+            limitarCampoTexto(seis51);
+            limitarCampoTexto(seis52);
+            limitarCampoTexto(seis53);
+            limitarCampoTexto(seis54);
+            limitarCampoTexto(seis05);
+            limitarCampoTexto(seis15);
+            limitarCampoTexto(seis25);
+            limitarCampoTexto(seis35);
+            limitarCampoTexto(seis45);
+            limitarCampoTexto(seis55);
     	}
     
     
