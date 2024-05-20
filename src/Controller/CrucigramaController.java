@@ -342,12 +342,113 @@ public class CrucigramaController {
     private Text Tiempo;
     
     public Partida partida1;
+    
+    @FXML
+    private Button BotonIniciarTiempo;
 
     
-    public void IniciarPartida(ActionEvent event) {
+    public void IniciarPartida4x4(ActionEvent event) {
     	partida1 = new Partida();
     	partida1.inicializarCronometro(Tiempo);
+    	BotonIniciarTiempo.setDisable(true);
+    	botonStop.setDisable(false);
+    	botonPista.setDisable(false);
+    	cuatro00.setDisable(false);
+    	cuatro10.setDisable(false);
+    	cuatro20.setDisable(false);
+    	cuatro30.setDisable(false);
+    	cuatro01.setDisable(false);
+    	cuatro11.setDisable(false);
+    	cuatro02.setDisable(false);
+    	cuatro21.setDisable(false);
+    	cuatro31.setDisable(false);
+    	cuatro12.setDisable(false);
+    	cuatro22.setDisable(false);
+    	cuatro32.setDisable(false);
+    	cuatro03.setDisable(false);
+    	cuatro13.setDisable(false);
+    	cuatro23.setDisable(false);
+    	cuatro33.setDisable(false);
     }
+    
+    	public void IniciarPartida5x5(ActionEvent event) {
+        	partida1 = new Partida();
+        	partida1.inicializarCronometro(Tiempo);
+        	BotonIniciarTiempo.setDisable(true);
+        	botonStop.setDisable(false);
+        	botonPista.setDisable(false);
+        	cinco00.setDisable(false);
+        	cinco10.setDisable(false);
+            cinco20.setDisable(false);
+            cinco30.setDisable(false);
+            cinco01.setDisable(false);
+            cinco11.setDisable(false);
+            cinco02.setDisable(false);
+            cinco21.setDisable(false);
+            cinco31.setDisable(false);
+            cinco12.setDisable(false);
+            cinco22.setDisable(false);
+            cinco32.setDisable(false);
+            cinco03.setDisable(false);
+            cinco13.setDisable(false);
+            cinco23.setDisable(false);
+            cinco33.setDisable(false);
+            cinco40.setDisable(false);
+            cinco41.setDisable(false);
+            cinco42.setDisable(false);
+            cinco43.setDisable(false);
+            cinco04.setDisable(false);
+            cinco14.setDisable(false);
+            cinco24.setDisable(false);
+            cinco34.setDisable(false);
+            cinco44.setDisable(false);
+    	}
+    	
+    	
+    	public void IniciarPartida6x6(ActionEvent event) {
+        	partida1 = new Partida();
+        	partida1.inicializarCronometro(Tiempo);
+        	BotonIniciarTiempo.setDisable(true);
+        	botonStop.setDisable(false);
+        	botonPista.setDisable(false);
+        	seis00.setDisable(false);
+        	seis10.setDisable(false);
+            seis20.setDisable(false);
+            seis30.setDisable(false);
+            seis01.setDisable(false);
+            seis11.setDisable(false);
+            seis02.setDisable(false);
+            seis21.setDisable(false);
+            seis31.setDisable(false);
+            seis12.setDisable(false);
+            seis22.setDisable(false);
+            seis32.setDisable(false);
+            seis03.setDisable(false);
+            seis13.setDisable(false);
+            seis23.setDisable(false);
+            seis33.setDisable(false);
+            seis40.setDisable(false);
+            seis41.setDisable(false);
+            seis42.setDisable(false);
+            seis43.setDisable(false);
+            seis04.setDisable(false);
+            seis14.setDisable(false);
+            seis24.setDisable(false);
+            seis34.setDisable(false);
+            seis44.setDisable(false);
+            seis50.setDisable(false);
+            seis51.setDisable(false);
+            seis52.setDisable(false);
+            seis53.setDisable(false);
+            seis54.setDisable(false);
+            seis05.setDisable(false);
+            seis15.setDisable(false);
+            seis25.setDisable(false);
+            seis35.setDisable(false);
+            seis45.setDisable(false);
+            seis55.setDisable(false);
+    	}
+    
     
     public void TerminarPartida(ActionEvent event) {
     	partida1.Stop(Tiempo, botonStop);
